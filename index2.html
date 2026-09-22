@@ -1,0 +1,1784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nexus Academy</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+
+<body class="bg-white text-gray-800">
+
+
+<!-- =========================================================
+     NAVIGATION BAR
+     Upgraded with:
+     - Sticky navigation
+     - Better spacing
+     - Hover animations
+     - Responsive mobile menu
+========================================================= -->
+
+<header class="sticky top-0 z-50 bg-[maroon] text-white shadow-xl">
+
+    <div class="flex items-center justify-between px-5 md:px-10 py-4">
+
+        <!-- Nexus Logo / Brand -->
+        <a href="#home" class="flex items-center gap-3">
+
+            <!-- Simple logo made entirely with Tailwind -->
+            <div class="w-10 h-10 rounded-xl bg-amber-400
+                        text-[maroon] flex items-center justify-center
+                        font-bold text-xl shadow-lg">
+
+                N
+
+            </div>
+
+            <div>
+
+                <h1 class="font-bold text-xl font-serif">
+                    Nexus Academy
+                </h1>
+
+                <p class="text-[9px] tracking-[3px] text-red-100">
+                    LEARN • BUILD • CREATE
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8">
+
+            <a href="#home"
+               class="font-serif text-lg
+                      hover:text-amber-400
+                      transition duration-300">
+                Home
+            </a>
+
+            <a href="#courses"
+               class="font-serif text-lg
+                      hover:text-amber-400
+                      transition duration-300">
+                Courses
+            </a>
+
+            <a href=""
+               class="font-serif text-lg
+                      hover:text-amber-400
+                      transition duration-300">
+                About
+            </a>
+
+            <a href=""
+               class="font-serif text-lg
+                      hover:text-amber-400
+                      transition duration-300">
+                My Learning
+            </a>
+
+        </nav>
+
+
+        <!-- Join button -->
+        <button
+            onclick="showJoinMessage()"
+            class="hidden md:block
+                   bg-amber-400 text-[maroon]
+                   font-bold px-5 py-2.5
+                   rounded-xl
+                   shadow-lg
+                   hover:bg-amber-300
+                   hover:-translate-y-1
+                   transition duration-300">
+
+            Join Now
+
+        </button>
+
+
+        <!-- Mobile menu button -->
+        <button
+            id="menuButton"
+            class="md:hidden text-2xl
+                   hover:text-amber-400
+                   transition">
+
+            ☰
+
+        </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         MOBILE MENU
+         Hidden on desktop.
+    ====================================================== -->
+
+    <div id="mobileMenu"
+         class="hidden md:hidden
+                border-t border-red-800
+                px-5 pb-5">
+
+        <a href="#home"
+           class="block py-3
+                  hover:text-amber-400">
+            Home
+        </a>
+
+        <a href="#courses"
+           class="block py-3
+                  hover:text-amber-400">
+            Courses
+        </a>
+
+        <a href="#about"
+           class="block py-3
+                  hover:text-amber-400">
+            About
+        </a>
+
+        <a href="#progress"
+           class="block py-3
+                  hover:text-amber-400">
+            My Learning
+        </a>
+
+        <button
+            onclick="showJoinMessage()"
+            class="mt-2
+                   bg-amber-400
+                   text-[maroon]
+                   px-5 py-2
+                   rounded-lg
+                   font-bold">
+
+            Join Now
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO SECTION
+     Your original hero has been kept but polished.
+========================================================= -->
+
+<section id="home" class="px-5 my-8">
+
+    <div class="max-w-7xl mx-auto
+                flex flex-col lg:flex-row
+                justify-between items-center
+                border-2 border-red-900
+                rounded-3xl
+                overflow-hidden
+                bg-gradient-to-br
+                from-white to-red-50
+                shadow-xl
+                hover:shadow-2xl
+                transition duration-500">
+
+
+        <!-- Hero text -->
+
+        <div class="p-7 md:p-12 lg:w-3/5">
+
+
+            <!-- Small badge -->
+
+            <span class="inline-block
+                         bg-red-100
+                         text-[maroon]
+                         px-4 py-2
+                         rounded-full
+                         text-sm font-bold
+                         mb-5">
+
+                🎓 YOUR LEARNING JOURNEY STARTS HERE
+
+            </span>
+
+
+            <!-- Main heading -->
+
+            <h2 class="text-4xl md:text-6xl
+                       font-bold
+                       font-serif
+                       text-[maroon]
+                       leading-tight">
+
+                MASTER THE
+                <span class="text-red-700">
+                    SKILLS
+                </span>
+                OF TOMORROW
+
+            </h2>
+
+
+            <h3 class="text-2xl md:text-3xl
+                       font-bold
+                       text-[maroon]
+                       mt-4">
+
+                Learn. Build. Create.
+
+            </h3>
+
+
+            <p class="text-gray-600
+                      text-base md:text-lg
+                      mt-5
+                      max-w-xl
+                      leading-relaxed">
+
+                Develop practical skills, work on real-world
+                projects and prepare yourself for the future
+                of work with Nexus Academy.
+
+            </p>
+
+
+            <!-- Hero buttons -->
+
+            <div class="flex flex-wrap gap-4 mt-8">
+
+                <button
+                    onclick="document.getElementById('courses').scrollIntoView({behavior:'smooth'})"
+                    class="bg-red-800
+                           hover:bg-[maroon]
+                           text-white
+                           px-6 py-3
+                           rounded-xl
+                           font-semibold
+                           shadow-lg
+                           hover:-translate-y-1
+                           transition duration-300">
+
+                    Explore Courses →
+
+                </button>
+
+
+                <button
+                    onclick="document.getElementById('progress').scrollIntoView({behavior:'smooth'})"
+                    class="border-2
+                           border-[maroon]
+                           text-[maroon]
+                           hover:bg-[maroon]
+                           hover:text-white
+                           px-6 py-3
+                           rounded-xl
+                           font-semibold
+                           hover:-translate-y-1
+                           transition duration-300">
+
+                    View Programs
+
+                </button>
+
+            </div>
+
+
+            <!-- Quick statistics -->
+
+            <div class="flex gap-8 mt-9">
+
+                <div>
+
+                    <p class="text-2xl font-bold text-[maroon]">
+                        20+
+                    </p>
+
+                    <p class="text-sm text-gray-500">
+                        Courses
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <p class="text-2xl font-bold text-[maroon]">
+                        10+
+                    </p>
+
+                    <p class="text-sm text-gray-500">
+                        Tutors
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <p class="text-2xl font-bold text-[maroon]">
+                        5K+
+                    </p>
+
+                    <p class="text-sm text-gray-500">
+                        Learners
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Hero image -->
+
+        <div class="lg:w-2/5
+                    flex justify-center
+                    p-6 md:p-10">
+
+            <img src="pi.png"
+                 alt="Nexus Academy"
+                 class="w-full max-w-md
+                        rounded-3xl
+                        shadow-2xl
+                        border-4 border-white
+                        hover:scale-105
+                        transition duration-500">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHY NEXUS SECTION
+========================================================= -->
+
+<section id="about" class="px-5 py-16">
+
+
+    <!-- Section heading -->
+
+    <div class="text-center mb-12">
+
+        <p class="text-red-700 font-bold tracking-widest">
+            WHY NEXUS?
+        </p>
+
+        <h2 class="text-4xl font-bold
+                   font-serif
+                   text-[maroon]
+                   mt-2">
+
+            Learn More. Build More.
+
+        </h2>
+
+        <p class="text-gray-500 mt-3 max-w-xl mx-auto">
+
+            Everything you need to turn knowledge
+            into practical skills.
+
+        </p>
+
+    </div>
+
+
+    <!-- Feature cards -->
+
+    <div class="max-w-6xl mx-auto
+                grid sm:grid-cols-2 lg:grid-cols-3
+                gap-6">
+
+
+        <!-- Expert Tutors -->
+
+        <div class="bg-gradient-to-l
+                    from-[maroon] to-red-700
+                    text-white
+                    rounded-2xl
+                    border-2 border-amber-500
+                    p-7
+                    shadow-lg
+                    hover:-translate-y-3
+                    hover:shadow-2xl
+                    transition duration-300">
+
+            <div class="text-4xl mb-5">
+                👨‍🏫
+            </div>
+
+            <h3 class="text-xl font-bold">
+                Expert Tutors
+            </h3>
+
+            <p class="text-red-100 mt-3 leading-relaxed">
+                Learn from tutors who can help you
+                understand practical concepts and skills.
+            </p>
+
+        </div>
+
+
+        <!-- Certificates -->
+
+        <div class="bg-gradient-to-l
+                    from-[maroon] to-red-700
+                    text-white
+                    rounded-2xl
+                    border-2 border-amber-500
+                    p-7
+                    shadow-lg
+                    hover:-translate-y-3
+                    hover:shadow-2xl
+                    transition duration-300">
+
+            <div class="text-4xl mb-5">
+                🏆
+            </div>
+
+            <h3 class="text-xl font-bold">
+                Certificates
+            </h3>
+
+            <p class="text-red-100 mt-3 leading-relaxed">
+                Track your achievements and complete
+                courses to build your learning record.
+            </p>
+
+        </div>
+
+
+        <!-- Projects -->
+
+        <div class="bg-gradient-to-l
+                    from-[maroon] to-red-700
+                    text-white
+                    rounded-2xl
+                    border-2 border-amber-500
+                    p-7
+                    shadow-lg
+                    hover:-translate-y-3
+                    hover:shadow-2xl
+                    transition duration-300">
+
+            <div class="text-4xl mb-5">
+                💻
+            </div>
+
+            <h3 class="text-xl font-bold">
+                Real Projects
+            </h3>
+
+            <p class="text-red-100 mt-3 leading-relaxed">
+                Practice your skills by building projects
+                based on real-world situations.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CAREER ACCELERATORS / COURSES
+========================================================= -->
+
+<section id="courses"
+         class="bg-red-50
+                py-16 px-5">
+
+
+    <div class="max-w-7xl mx-auto">
+
+
+        <!-- Heading -->
+
+        <div class="mb-8">
+
+            <p class="text-red-700 font-bold tracking-widest">
+                CAREER ACCELERATORS
+            </p>
+
+            <h2 class="text-3xl md:text-4xl
+                       font-bold
+                       text-[maroon]
+                       mt-2">
+
+                Get the skills and real-world
+                experience employers want.
+
+            </h2>
+
+        </div>
+
+
+        <!-- =====================================================
+             SEARCH + FILTERS
+        ====================================================== -->
+
+        <div class="flex flex-col md:flex-row
+                    justify-between
+                    gap-4 mb-8">
+
+
+            <!-- Search box -->
+
+            <input
+                id="courseSearch"
+                type="text"
+                placeholder="Search courses..."
+                class="w-full md:w-80
+                       px-5 py-3
+                       rounded-xl
+                       border border-red-200
+                       bg-white
+                       outline-none
+                       focus:ring-2
+                       focus:ring-red-800
+                       shadow-sm">
+
+
+            <!-- Filter tags -->
+
+            <div class="flex flex-wrap gap-2">
+
+                <button
+                    onclick="filterCourses('all')"
+                    class="filter-button
+                           bg-[maroon]
+                           text-white
+                           px-4 py-2
+                           rounded-full
+                           hover:-translate-y-1
+                           transition">
+
+                    All
+
+                </button>
+
+
+                <button
+                    onclick="filterCourses('technology')"
+                    class="filter-button
+                           bg-white
+                           text-[maroon]
+                           border border-red-200
+                           px-4 py-2
+                           rounded-full
+                           hover:bg-red-100
+                           transition">
+
+                    Technology
+
+                </button>
+
+
+                <button
+                    onclick="filterCourses('data')"
+                    class="filter-button
+                           bg-white
+                           text-[maroon]
+                           border border-red-200
+                           px-4 py-2
+                           rounded-full
+                           hover:bg-red-100
+                           transition">
+
+                    Data
+
+                </button>
+
+
+                <button
+                    onclick="filterCourses('business')"
+                    class="filter-button
+                           bg-white
+                           text-[maroon]
+                           border border-red-200
+                           px-4 py-2
+                           rounded-full
+                           hover:bg-red-100
+                           transition">
+
+                    Business
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             COURSE CARDS
+        ====================================================== -->
+
+        <div id="courseGrid"
+             class="grid sm:grid-cols-2
+                    lg:grid-cols-3
+                    gap-7">
+
+
+            <!-- CLOUD ENGINEER -->
+
+            <div class="course-card
+                        bg-white
+                        rounded-2xl
+                        overflow-hidden
+                        border border-red-200
+                        shadow-md
+                        hover:shadow-2xl
+                        hover:-translate-y-2
+                        transition duration-300"
+                 data-category="technology"
+                 data-name="cloud engineer">
+
+
+                <img src="p1.PNG"
+                     alt="Cloud Engineer"
+                     class="w-full h-48
+                            object-cover
+                            hover:scale-105
+                            transition duration-500">
+
+
+                <div class="p-5">
+
+                    <span class="text-xs
+                                 font-bold
+                                 text-red-700
+                                 bg-red-100
+                                 px-3 py-1
+                                 rounded-full">
+
+                        TECHNOLOGY
+
+                    </span>
+
+
+                    <h3 class="font-bold
+                               text-xl
+                               text-[maroon]
+                               mt-4">
+
+                        Cloud Engineer
+
+                    </h3>
+
+
+                    <p class="text-gray-500
+                              text-sm mt-2">
+
+                        Learn cloud computing,
+                        infrastructure and deployment.
+
+                    </p>
+
+
+                    <!-- Course progress -->
+
+                    <div class="mt-5">
+
+                        <div class="flex justify-between
+                                    text-xs mb-2">
+
+                            <span>
+                                Course Progress
+                            </span>
+
+                            <span class="font-bold text-[maroon]">
+                                65%
+                            </span>
+
+                        </div>
+
+
+                        <div class="h-2
+                                    bg-gray-200
+                                    rounded-full
+                                    overflow-hidden">
+
+                            <div
+                                class="h-full
+                                       bg-[maroon]
+                                       rounded-full"
+                                style="width:65%">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        onclick="enroll('Cloud Engineer')"
+                        class="w-full
+                               mt-5
+                               bg-[maroon]
+                               text-white
+                               py-3
+                               rounded-xl
+                               font-bold
+                               hover:bg-red-700
+                               hover:shadow-lg
+                               transition">
+
+                        Continue Course →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DATA SCIENTIST -->
+
+            <div class="course-card
+                        bg-white
+                        rounded-2xl
+                        overflow-hidden
+                        border border-red-200
+                        shadow-md
+                        hover:shadow-2xl
+                        hover:-translate-y-2
+                        transition duration-300"
+                 data-category="data"
+                 data-name="data scientist">
+
+
+                <img src="p2.PNG"
+                     alt="Data Scientist"
+                     class="w-full h-48
+                            object-cover
+                            hover:scale-105
+                            transition duration-500">
+
+
+                <div class="p-5">
+
+                    <span class="text-xs
+                                 font-bold
+                                 text-red-700
+                                 bg-red-100
+                                 px-3 py-1
+                                 rounded-full">
+
+                        DATA
+
+                    </span>
+
+
+                    <h3 class="font-bold
+                               text-xl
+                               text-[maroon]
+                               mt-4">
+
+                        Data Scientist
+
+                    </h3>
+
+
+                    <p class="text-gray-500
+                              text-sm mt-2">
+
+                        Explore data analysis,
+                        Python and machine learning.
+
+                    </p>
+
+
+                    <div class="mt-5">
+
+                        <div class="flex justify-between
+                                    text-xs mb-2">
+
+                            <span>
+                                Course Progress
+                            </span>
+
+                            <span class="font-bold text-[maroon]">
+                                35%
+                            </span>
+
+                        </div>
+
+
+                        <div class="h-2
+                                    bg-gray-200
+                                    rounded-full">
+
+                            <div
+                                class="h-full
+                                       bg-[maroon]
+                                       rounded-full"
+                                style="width:35%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        onclick="enroll('Data Scientist')"
+                        class="w-full
+                               mt-5
+                               bg-[maroon]
+                               text-white
+                               py-3
+                               rounded-xl
+                               font-bold
+                               hover:bg-red-700
+                               hover:shadow-lg
+                               transition">
+
+                        Continue Course →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DIGITAL MARKETING -->
+
+            <div class="course-card
+                        bg-white
+                        rounded-2xl
+                        overflow-hidden
+                        border border-red-200
+                        shadow-md
+                        hover:shadow-2xl
+                        hover:-translate-y-2
+                        transition duration-300"
+                 data-category="business"
+                 data-name="digital marketing">
+
+
+                <img src="p3.PNG"
+                     alt="Digital Marketing"
+                     class="w-full h-48
+                            object-cover
+                            hover:scale-105
+                            transition duration-500">
+
+
+                <div class="p-5">
+
+                    <span class="text-xs
+                                 font-bold
+                                 text-red-700
+                                 bg-red-100
+                                 px-3 py-1
+                                 rounded-full">
+
+                        BUSINESS
+
+                    </span>
+
+
+                    <h3 class="font-bold
+                               text-xl
+                               text-[maroon]
+                               mt-4">
+
+                        Digital Marketing
+
+                    </h3>
+
+
+                    <p class="text-gray-500
+                              text-sm mt-2">
+
+                        Learn content creation,
+                        branding and digital strategy.
+
+                    </p>
+
+
+                    <div class="mt-5">
+
+                        <div class="flex justify-between
+                                    text-xs mb-2">
+
+                            <span>
+                                Course Progress
+                            </span>
+
+                            <span class="font-bold text-[maroon]">
+                                80%
+                            </span>
+
+                        </div>
+
+
+                        <div class="h-2
+                                    bg-gray-200
+                                    rounded-full">
+
+                            <div
+                                class="h-full
+                                       bg-[maroon]
+                                       rounded-full"
+                                style="width:80%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        onclick="enroll('Digital Marketing')"
+                        class="w-full
+                               mt-5
+                               bg-[maroon]
+                               text-white
+                               py-3
+                               rounded-xl
+                               font-bold
+                               hover:bg-red-700
+                               hover:shadow-lg
+                               transition">
+
+                        Continue Course →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     LEARNING PROGRESS DASHBOARD
+========================================================= -->
+
+<section id="progress"
+         class="py-16 px-5">
+
+
+    <div class="max-w-7xl mx-auto">
+
+
+        <!-- Section heading -->
+
+        <div class="text-center mb-10">
+
+            <p class="text-red-700 font-bold">
+                MY LEARNING
+            </p>
+
+            <h2 class="text-4xl
+                       font-bold
+                       font-serif
+                       text-[maroon]">
+
+                Track Your Progress
+
+            </h2>
+
+        </div>
+
+
+        <div class="grid lg:grid-cols-3 gap-6">
+
+
+            <!-- Overall progress -->
+
+            <div class="lg:col-span-1
+                        bg-[maroon]
+                        text-white
+                        rounded-2xl
+                        p-7
+                        shadow-xl">
+
+
+                <p class="text-red-100">
+                    Overall Progress
+                </p>
+
+
+                <div class="flex items-end gap-2 mt-2">
+
+                    <span id="progressNumber"
+                          class="text-5xl font-bold">
+
+                        50%
+
+                    </span>
+
+                    <span class="text-red-200 mb-2">
+                        completed
+                    </span>
+
+                </div>
+
+
+                <!-- Progress bar -->
+
+                <div class="h-3
+                            bg-white/20
+                            rounded-full
+                            mt-6">
+
+                    <div id="mainProgressBar"
+                         class="h-3
+                                bg-amber-400
+                                rounded-full
+                                transition-all
+                                duration-700"
+                         style="width:50%">
+
+                    </div>
+
+                </div>
+
+
+                <p class="text-red-100
+                          text-sm
+                          mt-6">
+
+                    Complete your lessons to
+                    increase your learning progress.
+
+                </p>
+
+
+                <!-- Learning stats -->
+
+                <div class="grid grid-cols-2
+                            gap-3 mt-7">
+
+                    <div class="bg-white/10
+                                rounded-xl p-4">
+
+                        <p class="text-2xl font-bold">
+                            12
+                        </p>
+
+                        <p class="text-xs text-red-200">
+                            Lessons
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-white/10
+                                rounded-xl p-4">
+
+                        <p class="text-2xl font-bold">
+                            4
+                        </p>
+
+                        <p class="text-xs text-red-200">
+                            Courses
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INTERACTIVE LESSON CHECKLIST
+            ================================================== -->
+
+            <div class="lg:col-span-2
+                        border
+                        border-red-100
+                        rounded-2xl
+                        p-7
+                        shadow-md
+                        bg-white">
+
+
+                <div class="flex
+                            flex-col sm:flex-row
+                            justify-between
+                            gap-3
+                            mb-5">
+
+
+                    <div>
+
+                        <h3 class="text-xl
+                                   font-bold
+                                   text-[maroon]">
+
+                            Digital Marketing
+
+                        </h3>
+
+                        <p class="text-gray-500 text-sm">
+
+                            Your current learning path
+
+                        </p>
+
+                    </div>
+
+
+                    <span id="lessonCount"
+                          class="bg-red-100
+                                 text-[maroon]
+                                 px-4 py-2
+                                 rounded-full
+                                 text-sm
+                                 font-bold">
+
+                        2 / 4 completed
+
+                    </span>
+
+                </div>
+
+
+                <!-- Lesson 1 -->
+
+                <label class="flex items-center
+                              gap-4
+                              p-4
+                              bg-red-50
+                              rounded-xl
+                              cursor-pointer
+                              hover:bg-red-100
+                              transition">
+
+                    <input type="checkbox"
+                           class="lesson
+                                  w-5 h-5
+                                  accent-red-800"
+                           checked>
+
+                    <div>
+
+                        <p class="font-semibold">
+                            Introduction to Digital Marketing
+                        </p>
+
+                        <p class="text-xs text-gray-500">
+                            Lesson 1 • 12 minutes
+                        </p>
+
+                    </div>
+
+                </label>
+
+
+                <!-- Lesson 2 -->
+
+                <label class="flex items-center
+                              gap-4
+                              p-4 mt-3
+                              bg-red-50
+                              rounded-xl
+                              cursor-pointer
+                              hover:bg-red-100
+                              transition">
+
+                    <input type="checkbox"
+                           class="lesson
+                                  w-5 h-5
+                                  accent-red-800"
+                           checked>
+
+                    <div>
+
+                        <p class="font-semibold">
+                            Understanding Your Audience
+                        </p>
+
+                        <p class="text-xs text-gray-500">
+                            Lesson 2 • 18 minutes
+                        </p>
+
+                    </div>
+
+                </label>
+
+
+                <!-- Lesson 3 -->
+
+                <label class="flex items-center
+                              gap-4
+                              p-4 mt-3
+                              bg-red-50
+                              rounded-xl
+                              cursor-pointer
+                              hover:bg-red-100
+                              transition">
+
+                    <input type="checkbox"
+                           class="lesson
+                                  w-5 h-5
+                                  accent-red-800">
+
+                    <div>
+
+                        <p class="font-semibold">
+                            Creating Your Content Strategy
+                        </p>
+
+                        <p class="text-xs text-gray-500">
+                            Lesson 3 • 25 minutes
+                        </p>
+
+                    </div>
+
+                </label>
+
+
+                <!-- Lesson 4 -->
+
+                <label class="flex items-center
+                              gap-4
+                              p-4 mt-3
+                              bg-red-50
+                              rounded-xl
+                              cursor-pointer
+                              hover:bg-red-100
+                              transition">
+
+                    <input type="checkbox"
+                           class="lesson
+                                  w-5 h-5
+                                  accent-red-800">
+
+                    <div>
+
+                        <p class="font-semibold">
+                            Building Your First Campaign
+                        </p>
+
+                        <p class="text-xs text-gray-500">
+                            Lesson 4 • 30 minutes
+                        </p>
+
+                    </div>
+
+                </label>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     START LEARNING CTA
+========================================================= -->
+
+<section class="px-5 py-8">
+
+    <div class="max-w-7xl mx-auto
+                bg-red-200
+                text-[maroon]
+                p-6 md:p-8
+                border-2
+                border-[maroon]
+                rounded-2xl
+                flex flex-col md:flex-row
+                items-center
+                justify-between
+                gap-5
+                shadow-lg">
+
+
+        <div>
+
+            <h2 class="font-bold
+                       text-xl md:text-2xl
+                       font-serif">
+
+                Choose a Course.
+                Start Learning.
+                Start Building.
+
+            </h2>
+
+            <p class="text-red-800 mt-1">
+                Your next skill could be your biggest one.
+            </p>
+
+        </div>
+
+
+        <button
+            onclick="document.getElementById('courses').scrollIntoView({behavior:'smooth'})"
+            class="bg-[maroon]
+                   text-white
+                   px-6 py-3
+                   rounded-xl
+                   font-bold
+                   border-2
+                   border-amber-400
+                   shadow-lg
+                   hover:bg-red-700
+                   hover:-translate-y-1
+                   transition">
+
+            Start Now →
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="bg-[maroon] text-white mt-8">
+
+
+    <div class="max-w-7xl mx-auto
+                p-8
+                grid sm:grid-cols-2
+                lg:grid-cols-3
+                gap-10">
+
+
+        <!-- Popular courses -->
+
+        <div>
+
+            <h3 class="font-bold
+                       text-lg
+                       font-serif
+                       mb-4">
+
+                EXPLORE
+
+            </h3>
+
+
+            <a href="#courses"
+               class="block mb-2
+                      hover:text-amber-400
+                      transition">
+
+                Popular Courses
+
+            </a>
+
+
+            <a href="#progress"
+               class="block mb-2
+                      hover:text-amber-400
+                      transition">
+
+                How It Works
+
+            </a>
+
+
+            <p class="hover:text-amber-400
+                      transition">
+
+                Student Reviews ⭐⭐⭐⭐⭐
+
+            </p>
+
+        </div>
+
+
+        <!-- Nexus -->
+
+        <div>
+
+            <h3 class="font-bold
+                       text-lg
+                       font-serif
+                       mb-4">
+
+                NEXUS
+
+            </h3>
+
+
+            <a href="#courses"
+               class="block mb-2
+                      hover:text-amber-400
+                      transition">
+
+                Courses
+
+            </a>
+
+
+            <a href="#about"
+               class="block mb-2
+                      hover:text-amber-400
+                      transition">
+
+                About
+
+            </a>
+
+
+            <p class="mb-2
+                      hover:text-amber-400
+                      transition">
+
+                Contact
+
+            </p>
+
+
+            <p class="hover:text-amber-400
+                      transition">
+
+                Socials
+
+            </p>
+
+        </div>
+
+
+        <!-- Support -->
+
+        <div>
+
+            <h3 class="font-bold
+                       text-lg
+                       font-serif
+                       mb-4">
+
+                SUPPORT
+
+            </h3>
+
+
+            <p class="mb-2
+                      hover:text-amber-400
+                      transition">
+
+                Become a Tutor
+
+            </p>
+
+
+            <p class="mb-2
+                      hover:text-amber-400
+                      transition">
+
+                Register
+
+            </p>
+
+
+            <p class="mb-2
+                      hover:text-amber-400
+                      transition">
+
+                Customer Support
+
+            </p>
+
+
+            <p class="hover:text-amber-400
+                      transition">
+
+                Signup
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Copyright -->
+
+    <div class="border-t
+                border-red-800
+                text-center
+                py-5
+                text-red-200
+                text-sm">
+
+        © 2026 Nexus Academy •
+        Learn. Build. Create.
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+     
+     Tailwind handles all styling.
+     JavaScript is ONLY being used for functionality.
+========================================================= -->
+
+<script>
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+   Opens and closes the mobile menu.
+========================================================= */
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const mobileMenu =
+    document.getElementById("mobileMenu");
+
+
+menuButton.addEventListener("click", function () {
+
+    mobileMenu.classList.toggle("hidden");
+
+});
+
+
+
+/* =========================================================
+   COURSE FILTERING
+   Filters courses according to their category.
+========================================================= */
+
+function filterCourses(category) {
+
+    const courses =
+        document.querySelectorAll(".course-card");
+
+
+    courses.forEach(function(course) {
+
+        const courseCategory =
+            course.dataset.category;
+
+
+        if (
+            category === "all" ||
+            courseCategory === category
+        ) {
+
+            course.classList.remove("hidden");
+
+        } else {
+
+            course.classList.add("hidden");
+
+        }
+
+    });
+
+}
+
+
+
+/* =========================================================
+   COURSE SEARCH
+   Searches course names while the user types.
+========================================================= */
+
+const searchBox =
+    document.getElementById("courseSearch");
+
+
+searchBox.addEventListener("input", function() {
+
+    const searchValue =
+        searchBox.value.toLowerCase();
+
+
+    const courses =
+        document.querySelectorAll(".course-card");
+
+
+    courses.forEach(function(course) {
+
+        const courseName =
+            course.dataset.name;
+
+
+        if (courseName.includes(searchValue)) {
+
+            course.classList.remove("hidden");
+
+        } else {
+
+            course.classList.add("hidden");
+
+        }
+
+    });
+
+});
+
+
+
+/* =========================================================
+   LESSON CHECKLIST
+   Automatically calculates course progress.
+========================================================= */
+
+const lessons =
+    document.querySelectorAll(".lesson");
+
+const lessonCount =
+    document.getElementById("lessonCount");
+
+const progressNumber =
+    document.getElementById("progressNumber");
+
+const mainProgressBar =
+    document.getElementById("mainProgressBar");
+
+
+function updateProgress() {
+
+    /* Count checked lessons */
+
+    let completed = 0;
+
+
+    lessons.forEach(function(lesson) {
+
+        if (lesson.checked) {
+
+            completed++;
+
+        }
+
+    });
+
+
+    /* Calculate percentage */
+
+    const percentage =
+        Math.round(
+            (completed / lessons.length) * 100
+        );
+
+
+    /* Update text */
+
+    lessonCount.textContent =
+        completed +
+        " / " +
+        lessons.length +
+        " completed";
+
+
+    /* Update percentage */
+
+    progressNumber.textContent =
+        percentage + "%";
+
+
+    /* Update progress bar */
+
+    mainProgressBar.style.width =
+        percentage + "%";
+
+}
+
+
+/* Run whenever a lesson changes */
+
+lessons.forEach(function(lesson) {
+
+    lesson.addEventListener(
+        "change",
+        updateProgress
+    );
+
+});
+
+
+
+/* =========================================================
+   COURSE ENROLLMENT / CONTINUE BUTTON
+========================================================= */
+
+function enroll(courseName) {
+
+    alert(
+        "🎓 " +
+        courseName +
+        "\n\nYour learning journey is ready to continue!"
+    );
+
+}
+
+
+
+/* =========================================================
+   JOIN BUTTON
+========================================================= */
+
+function showJoinMessage() {
+
+    alert(
+        "Welcome to Nexus Academy! 🎓\n\nRegistration is ready to be connected to your signup page."
+    );
+
+}
+
+
+
+/* =========================================================
+   INITIAL PROGRESS
+   Calculate progress when the page first loads.
+========================================================= */
+
+updateProgress();
+
+</script>
+
+
+</body>
+
+</html>
+```
+
+</body>
+</html>
